@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { PhaetexLogo } from "./PhaetexLogo";
 
 const SCROLL_THRESHOLD = 24;
 
@@ -31,17 +32,23 @@ export default function Header() {
           : "bg-transparent border-b border-white/5"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-[4.25rem]">
+      <nav
+        className="w-full flex items-center justify-between h-16 sm:h-[4.25rem]"
+        style={{ paddingLeft: "var(--content-inset-x)", paddingRight: "var(--content-inset-x)" }}
+      >
+        <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
         <a
           href="#"
-          className={`inline-flex items-center gap-2 font-semibold text-lg tracking-tight transition-colors ${
+          className={`inline-flex items-center transition-colors duration-300 hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue/50 focus-visible:ring-offset-2 ${
             scrolled
               ? "text-primary-dark dark:text-white"
-              : "text-white hover:text-gray-200"
+              : "text-white"
           }`}
+          aria-label="Phaetex Solutions home"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" aria-hidden />
-          Phaetex Solutions
+          <span className="inline-block w-[140px] h-9 sm:w-[160px] sm:h-10 md:w-[180px] md:h-[2.75rem] max-h-[3.25rem]">
+            <PhaetexLogo aria-hidden />
+          </span>
         </a>
         <div className="flex items-center gap-1 sm:gap-2">
           {navLinks.map(({ href, label }) => (
@@ -64,6 +71,7 @@ export default function Header() {
             Contact
           </a>
           <ThemeToggle variant={scrolled ? "default" : "light"} />
+        </div>
         </div>
       </nav>
     </header>

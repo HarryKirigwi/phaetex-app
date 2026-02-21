@@ -1,5 +1,7 @@
 "use client";
 
+import { PhaetexLogo } from "./PhaetexLogo";
+
 const resources = [
   { label: "Freebies", href: "#" },
   { label: "Documentation", href: "#" },
@@ -74,15 +76,8 @@ export default function Footer() {
     <footer className="bg-primary-dark text-gray-400 md:rounded-none rounded-t-3xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8 md:pt-12 md:pb-8 lg:pt-16">
         {/* Mobile: logo centered at top */}
-        <a href="#" className="flex justify-center md:hidden mb-8 font-semibold text-white hover:text-accent-blue transition-colors">
-          <span className="inline-flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-accent-blue/20 flex items-center justify-center text-accent-blue shrink-0" aria-hidden>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
-            </span>
-            Phaetex Solutions
-          </span>
+        <a href="#" className="flex justify-center md:hidden mb-8 transition-opacity hover:opacity-90 text-white w-full max-w-[280px] sm:max-w-[320px] mx-auto h-16 sm:h-20 md:h-24">
+          <PhaetexLogo aria-hidden />
         </a>
 
         {/* Upper section */}
@@ -177,13 +172,8 @@ export default function Footer() {
 
         {/* Lower section: mobile = stacked centered; desktop = logo left, copyright right */}
         <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <a href="#" className="hidden md:inline-flex items-center gap-2 font-semibold text-white hover:text-accent-blue transition-colors shrink-0">
-            <span className="w-8 h-8 rounded-lg bg-accent-blue/20 flex items-center justify-center text-accent-blue" aria-hidden>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
-            </span>
-            Phaetex Solutions
+          <a href="#" className="hidden md:inline-flex items-center transition-opacity hover:opacity-90 shrink-0 text-white w-40 h-10 lg:w-48 lg:h-12">
+            <PhaetexLogo aria-hidden />
           </a>
           {/* Mobile: stacked centered with underlined links */}
           <div className="flex flex-col items-center gap-2 text-center md:hidden">
