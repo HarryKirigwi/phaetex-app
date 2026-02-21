@@ -40,7 +40,7 @@ function HeroPhonePreview() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end sm:items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <PlexusBackground />
         <div
@@ -50,17 +50,17 @@ export default function Hero() {
         />
       </div>
       <div
-        className="relative z-20 w-full pt-14 pb-8 sm:pt-20 sm:pb-12 lg:pb-24"
+        className="relative z-20 w-full pt-12 sm:pt-20 pb-12 sm:pb-16 lg:pb-24"
         style={{ paddingLeft: "var(--content-inset-x)", paddingRight: "var(--content-inset-x)" }}
       >
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-5 sm:gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="max-w-2xl min-w-0">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-4 sm:mb-5 lg:mb-6 max-w-xl">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-5 sm:mb-6 max-w-xl">
                 Professional SaaS Solutions for{" "}
                 <span className="text-accent-blue">Creators & Small Businesses</span>
               </h1>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-5 sm:mb-8 max-w-lg">
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8 max-w-lg">
                 Elevate your writing with our AI Humanizer or launch your online store today for just Ksh 2,000. We build digital tools that work for you.
               </p>
               <a
@@ -70,9 +70,9 @@ export default function Hero() {
                 See our products
               </a>
             </div>
-            <div className="relative flex justify-center lg:justify-end order-first lg:order-none min-h-[260px] sm:min-h-[420px] lg:min-h-[520px]">
+            <div className="relative flex justify-center lg:justify-end order-first lg:order-none min-h-[420px] lg:min-h-[520px]">
               {/* Dashboard-style layout: phone + floating cards */}
-              <div className="relative w-full max-w-[340px] lg:max-w-[480px] h-[260px] sm:h-[420px] lg:h-[520px] flex items-center justify-center">
+              <div className="relative w-full max-w-[340px] lg:max-w-[480px] h-[420px] lg:h-[520px] flex items-center justify-center">
                 {/* "Before Phaetex" pill */}
                 <div className="absolute top-0 right-4 lg:right-8 z-10 px-3 py-1.5 rounded-full bg-gray-800/95 dark:bg-primary-dark/95 border border-gray-600/50 text-xs font-medium text-gray-300">
                   Before Phaetex
