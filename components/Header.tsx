@@ -33,7 +33,7 @@ export default function Header() {
       }`}
     >
       <nav
-        className="w-full flex items-center justify-between h-12 sm:h-16 lg:h-[4.25rem]"
+        className="w-full flex items-center justify-between h-16 sm:h-[4.25rem]"
         style={{ paddingLeft: "var(--content-inset-x)", paddingRight: "var(--content-inset-x)" }}
       >
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between">

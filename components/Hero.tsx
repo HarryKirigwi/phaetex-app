@@ -70,7 +70,7 @@ export default function Hero() {
                 See our products
               </a>
             </div>
-            <div className="relative flex justify-center lg:justify-end order-first lg:order-none min-h-[420px] lg:min-h-[520px]">
+            <div className="relative flex justify-center lg:justify-end order-first lg:order-none min-h-[420px] lg:min-h-[520px] -mt-12 sm:mt-0">
               {/* Dashboard-style layout: phone + floating cards */}
               <div className="relative w-full max-w-[340px] lg:max-w-[480px] h-[420px] lg:h-[520px] flex items-center justify-center">
                 {/* "Before Phaetex" pill */}
