@@ -180,14 +180,14 @@ export default function Footer() {
             <p className="text-sm text-gray-500">
               Copyright © {new Date().getFullYear()} Phaetex Solutions
             </p>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors border-b border-gray-500 pb-0.5">Privacy Policy</a>
+            <a href="/privacy" className="text-sm text-gray-500 hover:text-white transition-colors border-b border-gray-500 pb-0.5">Privacy Policy</a>
             <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors border-b border-gray-500 pb-0.5">Terms & Conditions</a>
           </div>
           {/* Desktop: single line with pipes */}
           <p className="hidden md:block text-sm text-gray-500">
             Copyright © {new Date().getFullYear()} Phaetex Solutions{" "}
             <span className="text-gray-600">|</span>{" "}
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>{" "}
+            <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>{" "}
             <span className="text-gray-600">|</span>{" "}
             <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a>
           </p>
