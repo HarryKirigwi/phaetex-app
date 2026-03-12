@@ -59,7 +59,7 @@ const products = [
     layout: "dashboard",
     style: "accentBar",
     ctaLabel: "Humanize",
-    ctaHref: "#",
+    ctaHref: "https://humanizer.phaetex.com",
   },
   {
     id: "managed-ecommerce",
@@ -125,6 +125,7 @@ export default function Products() {
             const isElevated = (product as { style?: string }).style === "elevated";
             const ctaLabel = (product as { ctaLabel?: string }).ctaLabel;
             const ctaHref = (product as { ctaHref?: string }).ctaHref ?? "#";
+            const isExternalCta = ctaHref?.startsWith("http");
 
             if (isDashboard) {
               return (
@@ -146,6 +147,7 @@ export default function Products() {
                       {ctaLabel && (
                         <a
                           href={ctaHref}
+                          {...(isExternalCta && { target: "_blank", rel: "noopener noreferrer" })}
                           className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors mb-8"
                         >
                           <span className="w-2 h-2 rounded-sm bg-white/80" aria-hidden />
@@ -246,6 +248,7 @@ export default function Products() {
                     {ctaLabel && (
                       <a
                         href={ctaHref}
+                        {...(isExternalCta && { target: "_blank", rel: "noopener noreferrer" })}
                         className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors"
                       >
                         <span className="w-2 h-2 rounded-sm bg-white/80" aria-hidden />
