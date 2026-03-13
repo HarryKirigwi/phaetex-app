@@ -13,7 +13,7 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-const LEGAL_PATHS = ["/privacy", "/terms", "/refund"];
+const LEGAL_PATHS = ["/privacy", "/terms", "/refund", "/contact"];
 
 export default function Header() {
   const pathname = usePathname();

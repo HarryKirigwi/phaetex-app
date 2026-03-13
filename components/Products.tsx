@@ -90,7 +90,7 @@ const products = [
       "By choosing our managed solution, you save over Ksh 450,000 per year while getting the same professional online presence.",
     layout: "dashboardCentered",
     ctaLabel: "Get an online store today",
-    ctaHref: "#contact",
+    ctaHref: "/contact",
   },
 ];
 
