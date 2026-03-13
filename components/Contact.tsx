@@ -1,8 +1,8 @@
 "use client";
 
 export default function Contact() {
-  const email = "contact@phaetex.com";
-  const whatsappNumber = "254712345678";
+  const email = "sales@phaetex.com";
+  const whatsappNumber = "254743684477";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (

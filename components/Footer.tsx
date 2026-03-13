@@ -3,17 +3,17 @@
 import { PhaetexLogo } from "./PhaetexLogo";
 
 const resources = [
-  { label: "Freebies", href: "#" },
-  { label: "Documentation", href: "#" },
+  // { label: "Freebies", href: "#" },
+  //{ label: "Documentation", href: "#" },
   { label: "Blog", href: "#" },
-  { label: "Refund Policy", href: "#" },
+  { label: "Refund Policy", href: "/refund" },
 ];
 
 const support = [
   { label: "Pricing", href: "#products" },
   { label: "FAQ", href: "#" },
   { label: "Support", href: "#contact" },
-  { label: "License Terms", href: "#" },
+ // { label: "License Terms", href: "#" },
   //{ label: "Discord", href: "#" },
 ];
 
@@ -25,7 +25,7 @@ const company = [
 const socials = [
   { label: "LinkedIn", href: "#", icon: "in" },
   { label: "Facebook", href: "#", icon: "f" },
-  { label: "YouTube", href: "#", icon: "play" },
+  //{ label: "YouTube", href: "#", icon: "play" },
   //{ label: "GitHub", href: "#", icon: "gh" },
   //{ label: "Dribbble", href: "#", icon: "d" },
 ];
