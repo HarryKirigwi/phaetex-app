@@ -48,7 +48,7 @@ export default function Contact() {
                 </span>
                 <h3 className="font-semibold text-primary-dark dark:text-white mb-1">Call us</h3>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-blue dark:hover:text-accent-blue transition-colors">
-                  +254 712 345 678
+                  +254 43684477
                 </a>
               </div>
             </div>
