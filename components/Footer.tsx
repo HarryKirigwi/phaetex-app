@@ -10,16 +10,16 @@ const resources = [
 ];
 
 const support = [
-  { label: "Pricing", href: "#products" },
+  { label: "Pricing", href: "/#products" },
   { label: "FAQ", href: "#" },
-  { label: "Support", href: "#contact" },
- // { label: "License Terms", href: "#" },
+  { label: "Support", href: "/#contact" },
+  // { label: "License Terms", href: "#" },
   //{ label: "Discord", href: "#" },
 ];
 
 const company = [
-  { label: "About", href: "#about" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 const socials = [
