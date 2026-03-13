@@ -1,9 +1,32 @@
 "use client";
 
+import { useState, FormEvent } from "react";
+import { apiPost } from "@/lib/api";
+
 export default function Contact() {
-  const email = "sales@phaetex.com";
+  const emailAddr = "sales@phaetex.com";
   const whatsappNumber = "254743684477";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneCountry, setPhoneCountry] = useState("254");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      await apiPost("/api/contact-messages", { firstName, lastName, email, phoneCountry, phoneNumber, message });
+      setStatus("sent");
+      setFirstName(""); setLastName(""); setEmail(""); setPhoneNumber(""); setMessage("");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section
@@ -38,8 +61,8 @@ export default function Contact() {
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </span>
                 <h3 className="font-semibold text-primary-dark dark:text-white mb-1">Chat to sales</h3>
-                <a href={`mailto:${email}`} className="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-blue dark:hover:text-accent-blue transition-colors">
-                  {email}
+                <a href={`mailto:${emailAddr}`} className="text-sm text-gray-600 dark:text-gray-400 hover:text-accent-blue dark:hover:text-accent-blue transition-colors">
+                  {emailAddr}
                 </a>
               </div>
               <div className="rounded-2xl bg-gray-200/80 dark:bg-primary-dark/80 border border-gray-200 dark:border-gray-700 p-5">
@@ -57,8 +80,18 @@ export default function Contact() {
           {/* Right: form */}
           <form
             className="rounded-2xl bg-gray-200/80 dark:bg-primary-dark/80 border border-gray-200 dark:border-gray-700 p-6 sm:p-8 space-y-5"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
+            {status === "sent" && (
+              <div className="rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-sm px-4 py-3">
+                Message sent successfully! We&apos;ll be in touch.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="rounded-lg bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-sm px-4 py-3">
+                Something went wrong. Please try again.
+              </div>
+            )}
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="contact-first" className="block text-sm font-medium text-primary-dark dark:text-white mb-1.5">
@@ -67,6 +100,9 @@ export default function Contact() {
                 <input
                   id="contact-first"
                   type="text"
+                  required
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   placeholder="First name"
                   className="w-full px-4 py-3 rounded-xl bg-white dark:bg-primary-dark/60 border border-gray-300 dark:border-gray-600 text-primary-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-accent-blue"
                 />
@@ -78,6 +114,9 @@ export default function Contact() {
                 <input
                   id="contact-last"
                   type="text"
+                  required
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   placeholder="Last name"
                   className="w-full px-4 py-3 rounded-xl bg-white dark:bg-primary-dark/60 border border-gray-300 dark:border-gray-600 text-primary-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-accent-blue"
                 />
@@ -90,6 +129,9 @@ export default function Contact() {
               <input
                 id="contact-email"
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="example@gmail.com"
                 className="w-full px-4 py-3 rounded-xl bg-white dark:bg-primary-dark/60 border border-gray-300 dark:border-gray-600 text-primary-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-accent-blue"
               />
@@ -102,6 +144,8 @@ export default function Contact() {
                 <select
                   id="contact-phone-country"
                   aria-label="Country code"
+                  value={phoneCountry}
+                  onChange={(e) => setPhoneCountry(e.target.value)}
                   className="px-3 py-3 bg-gray-100 dark:bg-primary-dark/80 border-r border-gray-300 dark:border-gray-600 text-primary-dark dark:text-white text-sm focus:outline-none"
                 >
                   <option value="254">+254</option>
@@ -114,6 +158,9 @@ export default function Contact() {
                 <input
                   id="contact-phone"
                   type="tel"
+                  required
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
                   placeholder="Phone number"
                   className="flex-1 min-w-0 px-4 py-3 bg-transparent text-primary-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none"
                 />
@@ -126,15 +173,19 @@ export default function Contact() {
               <textarea
                 id="contact-message"
                 rows={4}
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Please type your message here.."
                 className="w-full px-4 py-3 rounded-xl bg-white dark:bg-primary-dark/60 border border-gray-300 dark:border-gray-600 text-primary-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-accent-blue resize-y"
               />
             </div>
             <button
               type="submit"
-              className="px-6 py-3.5 rounded-xl font-medium bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors shadow-lg shadow-accent-blue/20"
+              disabled={status === "sending"}
+              className="px-6 py-3.5 rounded-xl font-medium bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors shadow-lg shadow-accent-blue/20 disabled:opacity-50"
             >
-              Send Message
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, FormEvent } from "react";
+import { apiPost } from "@/lib/api";
 import { PhaetexLogo } from "./PhaetexLogo";
 
 const resources = [
@@ -71,6 +73,55 @@ function SocialIcons({ className = "" }: { className?: string }) {
   );
 }
 
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("sending");
+    try {
+      await apiPost("/api/newsletter", { email });
+      setStatus("sent");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  return (
+    <div>
+      <form
+        onSubmit={handleSubmit}
+        className="flex rounded-xl overflow-hidden border border-gray-600 bg-primary-dark/80 focus-within:border-accent-blue/50 focus-within:ring-1 focus-within:ring-accent-blue/50 max-w-md md:max-w-none mx-auto md:mx-0"
+      >
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email address"
+          className="flex-1 min-w-0 px-4 py-3 bg-transparent text-white placeholder-gray-500 focus:outline-none text-sm"
+          aria-label="Email for newsletter"
+          required
+        />
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="p-3 bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors shrink-0 disabled:opacity-50"
+          aria-label="Subscribe"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+        </button>
+      </form>
+      {status === "sent" && <p className="text-xs text-emerald-400 mt-2">Subscribed successfully!</p>}
+      {status === "error" && <p className="text-xs text-red-400 mt-2">Something went wrong. Try again.</p>}
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-primary-dark text-gray-400 md:rounded-none rounded-t-3xl">
@@ -89,26 +140,7 @@ export default function Footer() {
               <p className="text-sm text-gray-400 mb-4 max-w-sm md:max-w-none mx-auto md:mx-0">
                 Discover the features that will transform your customer relationships.
               </p>
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="flex rounded-xl overflow-hidden border border-gray-600 bg-primary-dark/80 focus-within:border-accent-blue/50 focus-within:ring-1 focus-within:ring-accent-blue/50 max-w-md md:max-w-none mx-auto md:mx-0"
-              >
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 min-w-0 px-4 py-3 bg-transparent text-white placeholder-gray-500 focus:outline-none text-sm"
-                  aria-label="Email for newsletter"
-                />
-                <button
-                  type="submit"
-                  className="p-3 bg-accent-blue text-white hover:bg-accent-blue/90 transition-colors shrink-0"
-                  aria-label="Subscribe"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-              </form>
+              <NewsletterForm />
             </div>
             <div className="hidden md:block">
               <h3 className="font-bold text-white mb-3">Follow us on</h3>
