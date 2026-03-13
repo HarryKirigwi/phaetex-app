@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ScrollAnimationController from "@/components/ScrollAnimationController";
 
 export const metadata: Metadata = {
   title: "Phaetex Solutions | Enterprise Systems for Businesses",
@@ -43,10 +40,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <ScrollAnimationController />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
