@@ -62,7 +62,7 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-primary-dark text-gray-100">
+    <div className="min-h-screen bg-white text-primary-dark dark:bg-primary-dark dark:text-gray-100">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <Link
           href="/"
@@ -74,20 +74,20 @@ export default function PrivacyPage() {
           Back to home
         </Link>
 
-        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary-dark dark:text-white mb-2">
           Phaetex Solutions Privacy Policy
         </h1>
-        <p className="text-gray-400 mb-12 leading-relaxed">
+        <p className="text-gray-800 dark:text-gray-300 mb-12 leading-relaxed">
           Phaetex Solutions protects your personal data. We comply with the Kenya Data Protection Act 2019. This document explains our data practices.
         </p>
 
         <div className="space-y-10">
           {sections.map((section) => (
             <section key={section.number} className="space-y-3">
-              <h2 className="text-lg sm:text-xl font-bold text-white">
+              <h2 className="text-lg sm:text-xl font-bold text-primary-dark dark:text-white">
                 {section.number}. {section.title}
               </h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-900 dark:text-gray-200 leading-relaxed">
                 {section.body}
               </p>
             </section>
