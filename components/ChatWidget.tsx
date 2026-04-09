@@ -111,7 +111,7 @@ export default function ChatWidget() {
       {isOpen ? (
         <div
           ref={panelRef}
-          className="w-[min(92vw,380px)] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-slate-950"
+          className="absolute bottom-16 right-0 w-[min(92vw,380px)] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-slate-950"
         >
           <div className="flex items-center justify-between gap-3 border-b border-slate-200/70 bg-slate-950 px-4 py-3 text-white dark:border-white/10 dark:bg-slate-950">
             <div className="min-w-0">
@@ -210,7 +210,7 @@ export default function ChatWidget() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="ml-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-slate-950 text-white shadow-lg ring-1 ring-black/5 hover:opacity-95 dark:bg-slate-900"
+        className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-slate-950 text-white shadow-lg ring-1 ring-black/5 hover:opacity-95 dark:bg-slate-900"
         aria-label="Open chat"
       >
         <svg
