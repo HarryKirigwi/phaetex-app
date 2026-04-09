@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollAnimationController from "@/components/ScrollAnimationController";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function SiteLayout({
   children,
@@ -13,6 +14,7 @@ export default function SiteLayout({
       <Header />
       <main>{children}</main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
