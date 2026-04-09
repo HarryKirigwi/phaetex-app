@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path 'public/widget' | Out-Null; if (Test-Path 'frontend/widget') { Copy-Item -Force -Recurse 'frontend/widget/*' 'public/widget/' }\"",
     "dev": "next dev",
+    "prebuild": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path 'public/widget' | Out-Null; if (Test-Path 'frontend/widget') { Copy-Item -Force -Recurse 'frontend/widget/*' 'public/widget/' }\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
