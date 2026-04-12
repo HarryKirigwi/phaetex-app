@@ -15,7 +15,7 @@ const teamMembers = [
     image: "/images/james.jpeg",
   },
   {
-    name: "Kinyanjui Wilson",
+    name: "Wilson Kinyanjui",
     role: "AI Engineer",
     image: "/images/kinyanjui.jpeg",
   },
@@ -25,7 +25,7 @@ const teamMembers = [
     image: "/images/kibe.jpeg",
   },
   {
-    name: "Migichi",
+    name: "Peter Migichi",
     role: "Social Media Manager",
     image: "/images/Migichi.jpeg",
   },
