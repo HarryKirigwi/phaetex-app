@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Refund Policy | Phaetex Solutions",
   description:
-    "Phaetex Solutions refund policy for AI Humanizer credits, subscriptions, and related services.",
+    "Phaetex Solutions refund policy for subscriptions and related services.",
 };
 
 const sections = [
@@ -16,9 +16,9 @@ const sections = [
   },
   {
     number: 2,
-    title: "Humanization credits",
+    title: "Setup fees",
     body:
-      "You purchase credits for the AI Humanizer. These credit purchases are final. Phaetex Solutions does not issue refunds for purchased credits. You use your credits at your own discretion.",
+      "The one-time e-commerce setup fee (from as low as Ksh 2,000, as quoted at signup) covers onboarding and configuration. Setup fees are generally non-refundable once work has begun. Contact support if you believe a billing error occurred.",
   },
   {
     number: 3,

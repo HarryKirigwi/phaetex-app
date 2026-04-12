@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms & Conditions | Phaetex Solutions",
   description:
-    "Phaetex Solutions terms and conditions governing the use of our AI Humanizer and managed e-commerce services.",
+    "Phaetex Solutions terms and conditions governing the use of our managed e-commerce services.",
 };
 
 const sections = [
@@ -24,13 +24,13 @@ const sections = [
     number: 3,
     title: "Services",
     body:
-      "Phaetex Solutions provides software for text processing. Phaetex Solutions provides managed platforms for e-commerce. We maintain the underlying technology. We update the software to ensure functionality.",
+      "Phaetex Solutions provides managed e-commerce platforms for retail businesses. We maintain the underlying technology. We update the software to ensure functionality.",
   },
   {
     number: 4,
     title: "Fees and payments",
     body:
-      "The e-commerce setup fee is Ksh 2,000. This fee is a one-time payment. The monthly maintenance fee is Ksh 2,000. You pay this fee every month. All payments occur through M-Pesa or our specified payment channels. We suspend access for unpaid balances. We do not provide refunds.",
+      "Fees start from as low as Ksh 2,000 for setup (one-time) and from as low as Ksh 2,000 per month for maintenance. Exact amounts are quoted and agreed before you pay. All payments occur through M-Pesa or our specified payment channels. We suspend access for unpaid balances. We do not provide refunds except as stated in our refund policy.",
   },
   {
     number: 5,
@@ -42,58 +42,52 @@ const sections = [
     number: 6,
     title: "Content ownership",
     body:
-      "You retain ownership of the text you process through our AI Humanizer. You retain ownership of the products you list on your e-commerce store. You guarantee your content does not violate any laws. You guarantee your content does not infringe on intellectual property rights.",
+      "You retain ownership of the products, descriptions, and media you list on your e-commerce store. You guarantee your content does not violate any laws. You guarantee your content does not infringe on intellectual property rights.",
   },
   {
     number: 7,
-    title: "AI Humanizer use",
-    body:
-      "Our software improves the readability of automated text. We do not guarantee the performance of the output against specific detection tools. You use the output at your own risk.",
-  },
-  {
-    number: 8,
     title: "E-commerce use",
     body:
       "We provide the hosting environment. We provide the security updates. You manage your shop customers. You fulfill your own orders.",
   },
   {
-    number: 9,
+    number: 8,
     title: "Prohibited uses",
     body:
       "You do not use our software for illegal purposes. You do not attempt to breach our security. You do not scrape data from our platform. You do not upload malware.",
   },
   {
-    number: 10,
+    number: 9,
     title: "Intellectual property",
     body:
       "Phaetex Solutions owns all rights to the software. Phaetex Solutions owns all rights to the platform design. You do not copy our code. You do not resell our services without permission.",
   },
   {
-    number: 11,
+    number: 10,
     title: "Limitation of liability",
     body:
       "We provide services on an as-is basis. We do not guarantee the software is free of errors. We are not liable for financial losses. We are not liable for data loss. Our total liability does not exceed the amount you paid us.",
   },
   {
-    number: 12,
+    number: 11,
     title: "Governing law",
     body:
       "The laws of Kenya govern these terms. Any disputes will be resolved in Kenyan courts.",
   },
   {
-    number: 13,
+    number: 12,
     title: "Termination",
     body:
       "You stop using the service at any time. We terminate your account for violations of these terms. We terminate your account for non-payment.",
   },
   {
-    number: 14,
+    number: 13,
     title: "Changes to terms",
     body:
       "We update these terms. We post the updated version on our website. Your continued use of the platform indicates your agreement to the new terms.",
   },
   {
-    number: 15,
+    number: 14,
     title: "Contact",
     body:
       "Reach out to our support team for questions regarding these terms.",
@@ -130,8 +124,7 @@ export default function TermsPage() {
         </h1>
         <p className="text-gray-800 dark:text-gray-300 mb-12 leading-relaxed">
           These terms and conditions govern your use of Phaetex Solutions
-          products and services, including our AI Humanizer and managed
-          e-commerce platforms.
+          managed e-commerce platforms and related services.
         </p>
 
         <div className="space-y-10">

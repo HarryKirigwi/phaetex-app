@@ -3,13 +3,13 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Phaetex Solutions | Enterprise Systems for Businesses",
+  title: "Phaetex Software | Enterprise and ecommerce Systems for Businesses",
   description:
-    "Phaetex Solutions builds enterprise systems for businesses. Explore our products and get in touch for custom solutions.",
+    "Phaetex Solutions builds Enterprise and ecommerce Systems for businesses. Explore our products and get in touch for custom solutions.",
   openGraph: {
-    title: "Phaetex Solutions | Enterprise Systems for Businesses",
+    title: "Phaetex Software | Enterprise and ecommerce Systems for Businesses",
     description:
-      "Phaetex Solutions builds enterprise systems for businesses. Explore our products and get in touch for custom solutions.",
+      "Phaetex Software builds Enterprise and ecommerce Systems for businesses. Explore our products and get in touch for custom solutions.",
     type: "website",
   },
   metadataBase: new URL("https://phaetex.com"),

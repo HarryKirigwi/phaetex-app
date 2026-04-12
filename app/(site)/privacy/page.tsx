@@ -11,7 +11,7 @@ const sections = [
   {
     number: 1,
     title: "Data we collect",
-    body: "We collect names and email addresses. We collect billing details through payment processors. Our AI Humanizer collects text you provide. Our e-commerce platform collects product details and customer transaction records. Our system logs IP addresses and device types.",
+    body: "We collect names and email addresses. We collect billing details through payment processors. Our e-commerce platform collects product details and customer transaction records. Our system logs IP addresses and device types.",
   },
   {
     number: 2,
@@ -21,7 +21,7 @@ const sections = [
   {
     number: 3,
     title: "Data usage",
-    body: "We use data to create accounts. We use data to process payments. We use data to provide technical support. We use data to improve our software. Our AI Humanizer processes text to generate natural prose. We do not use your provided text to train external models.",
+    body: "We use data to create accounts. We use data to process payments. We use data to provide technical support. We use data to improve our software and platform reliability.",
   },
   {
     number: 4,
