@@ -57,11 +57,11 @@ export default function Hero() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="max-w-2xl min-w-0">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-5 sm:mb-6 max-w-xl">
-                Professional SaaS Solutions for{" "}
-                <span className="text-accent-blue">Creators & Small Businesses</span>
+                Managed E-commerce for{" "}
+                <span className="text-accent-blue">Retail & Growing Brands</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8 max-w-lg">
-                Elevate your writing with our AI Humanizer or launch your online store today for just Ksh 2,000. We build digital tools that work for you.
+                Launch a professional online store without the enterprise bill. Pricing starts from as low as Ksh 2,000 for setup and from as low as Ksh 2,000/month, covering hosting, security, and updates,with your final quote confirmed before you pay.
               </p>
               <a
                 href="#products"
@@ -82,12 +82,12 @@ export default function Hero() {
                   <div className="flex items-center gap-2 mb-2">
                     <span className="w-8 h-8 rounded-lg bg-accent-blue/20 flex items-center justify-center text-accent-blue font-bold text-sm">P</span>
                     <div>
-                      <p className="text-xs font-semibold text-white leading-tight">Humanizer</p>
+                      <p className="text-xs font-semibold text-white leading-tight">Your store</p>
                       <p className="text-[10px] text-gray-500">phaetex.com</p>
                     </div>
                   </div>
-                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-2">Creator</span>
-                  <p className="text-[10px] text-gray-400 leading-snug mb-2">Content that sounds human. One click.</p>
+                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-2">Live</span>
+                  <p className="text-[10px] text-gray-400 leading-snug mb-2">Catalog, checkout, and orders—managed for you.</p>
                   <div className="h-1.5 w-full rounded-full bg-gray-700 overflow-hidden">
                     <div className="h-full w-3/4 rounded-full bg-accent-blue" />
                   </div>

@@ -17,23 +17,24 @@ export default function About() {
           </div>
           <div className="lg:col-span-7 space-y-6">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              At Phaetex Solutions, we specialize in developing{" "}
-              <strong>direct-to-user SaaS applications</strong> that solve modern
-              digital challenges. Whether you are a student striving for authentic
-              writing or a shop owner looking to digitize your inventory, our
-              software is designed to be powerful, intuitive, and budget-friendly.
+              At Phaetex Solutions, we specialize in{" "}
+              <strong>managed e-commerce</strong> for Kenyan retail and growing
+              brands: a full online store as a service, with pricing from as low as
+              Ksh 2,000, no surprise developer invoices, and no need to manage hosting
+              or security yourself.
             </p>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              We don&apos;t just build apps; we build opportunities for growth in
-              the digital marketplace.
+              We focus on the product that matters most to shop owners: a reliable
+              storefront, clear checkout, and a team that keeps the platform
+              running while you focus on customers and inventory.
             </p>
             <ul className="flex flex-wrap gap-3 pt-2">
               {[
-                "Humanize",
-                "E-commerce architecture",
+                "E-commerce as a service",
+                "Managed hosting & updates",
                 "Affordable",
                 "Budget-friendly",
-                "Direct-to-user SaaS",
+                "Retail-ready",
                 "Digital growth",
                 "Intuitive",
               ].map((item) => (

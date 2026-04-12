@@ -21,6 +21,7 @@ const support = [
 
 const company = [
   { label: "About", href: "/#about" },
+  { label: "Team", href: "/#team" },
   { label: "Contact Us", href: "/#contact" },
 ];
 

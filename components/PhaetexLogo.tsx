@@ -48,7 +48,7 @@ export function PhaetexLogo({ className = "", "aria-hidden": ariaHidden }: Phaet
         fontWeight="600"
         letterSpacing="0.14em"
       >
-        SOLUTIONS
+        SOFTWARE
       </text>
     </svg>
   );

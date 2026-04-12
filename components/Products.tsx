@@ -4,12 +4,12 @@ const comparisonRows = [
   {
     feature: "Setup / Installation",
     traditional: "Ksh 50,000 – 150,000 (Development)",
-    ourSolution: "Ksh 2,000 (One-time)",
+    ourSolution: "From as low as Ksh 2,000 (one-time)",
   },
   {
     feature: "Monthly Salary / Fee",
     traditional: "Ksh 40,000 – 120,000+",
-    ourSolution: "Ksh 2,000 (Fixed)",
+    ourSolution: "From as low as Ksh 2,000/mo",
   },
   {
     feature: "Hosting & Servers",
@@ -29,11 +29,12 @@ const comparisonRows = [
   {
     feature: "Annual Total",
     traditional: "Ksh 500,000+",
-    ourSolution: "Ksh 26,000",
+    ourSolution: "From as low as ~Ksh 26,000/yr (at entry pricing)",
   },
 ];
 
 const products = [
+  /*
   {
     id: "phaetex-humanizer",
     name: "Phaetex Humanizer: Write with Authenticity",
@@ -61,25 +62,38 @@ const products = [
     ctaLabel: "Humanize",
     ctaHref: "https://humanizer.phaetex.com",
   },
+  */
   {
     id: "managed-ecommerce",
-    name: "Managed E-commerce: Your Shop, Online, Tonight",
+    name: "Managed E-commerce: Get Your Shop, Online, Tonight",
     description:
-      "Get a professional online presence without the enterprise price tag. We provide a fully managed SaaS platform specifically for retail shops.",
+      "E-commerce as a service: we give retail shops a full online store without hiring a developer or managing servers. You get catalog, checkout, order processing, shipping management and customer-ready experience. We run the platform, security, backups, and updates so you focus on stock, pricing, and sales. Under a different managed ecommerce tier, you get regular content updates and SEO to attract organic traffic",
     introLine:
-      "In the tech world, hiring a developer is just the tip of the iceberg—there are also servers, security, and the \"headache factor.\" Here is a comparison designed to show that for the cost of a developer's lunch, you get an entire IT department.",
+      "In the tech world, hiring a developer is just the tip of the iceberg—there are also servers, SSL, payment hooks, and the \"headache factor.\" Managed e-commerce means we carry that load: pricing from as low as Ksh 2,000 for setup and from as low as Ksh 2,000/month, with final amounts confirmed when you sign up—a clear path from brick-and-mortar to digital storefront.",
     points: [
       {
         title: "Transparent Pricing",
-        text: "Only Ksh 2,000 for installation.",
+        text: "Installation from as low as Ksh 2,000; we quote the exact figure before you pay.",
       },
       {
         title: "Worry-Free Maintenance",
-        text: "For just Ksh 2,000/month, we handle the hosting, security, and updates.",
+        text: "Monthly plans from as low as Ksh 2,000 handling hosting, security, and updates.",
       },
       {
         title: "Mobile-Ready",
         text: "Your customers can shop from any device, anywhere.",
+      },
+      {
+        title: "Retail-First Workflow",
+        text: "Designed for shops moving inventory online: products, categories, and orders in one place.",
+      },
+      {
+        title: "We Manage the Stack",
+        text: "Infrastructure, patches, and monitoring are on us so you do not rent separate hosting or chase freelancers for outages.",
+      },
+      {
+        title: "Scale Without Rebuilding",
+        text: "Add products and grow traffic on the same platform; we keep the engine under the hood aligned with best practices.",
       },
     ],
     image:
@@ -87,7 +101,7 @@ const products = [
     inDevelopment: false,
     showComparison: true,
     verdict:
-      "By choosing our managed solution, you save over Ksh 450,000 per year while getting the same professional online presence.",
+      "Compared with typical full-time developer costs, our managed solution can save well over Ksh 450,000 per year while you still get a professional online presence at entry pricing from as low as Ksh 2,000.",
     layout: "dashboardCentered",
     ctaLabel: "Get an online store today",
     ctaHref: "/contact",
@@ -99,22 +113,10 @@ export default function Products() {
     <section
       id="products"
       data-animate
-      className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white dark:bg-primary-dark"
+      className="pt-10 sm:pt-12 lg:pt-14 pb-16 sm:pb-24 lg:pb-28 px-4 sm:px-6 lg:px-8 bg-white dark:bg-primary-dark"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 lg:mb-16">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark dark:text-white mb-2">
-              Our products
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-              Tools and platforms we build for modern creators and small businesses. More coming as we
-              ship.
-            </p>
-          </div>
-        </div>
-
-        <div className="space-y-20 lg:space-y-28">
+        <div className="space-y-16 lg:space-y-24">
           {products.map((product, index) => {
             const productNumber = index + 1;
             const layout = (product as { layout?: string }).layout;
@@ -280,6 +282,21 @@ export default function Products() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                   </svg>
                                 )}
+                                {point.title === "Retail-First Workflow" && (
+                                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                  </svg>
+                                )}
+                                {point.title === "We Manage the Stack" && (
+                                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                  </svg>
+                                )}
+                                {point.title === "Scale Without Rebuilding" && (
+                                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                  </svg>
+                                )}
                               </div>
                               <div>
                                 <h4 className="font-bold text-primary-dark dark:text-white text-lg mb-1">
@@ -305,11 +322,13 @@ export default function Products() {
                       />
                       <div className="absolute top-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-40 p-3 rounded-xl bg-primary-dark/90 dark:bg-primary-dark border border-white/10 shadow-lg">
                         <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">Setup</p>
+                        <p className="text-[10px] text-gray-500">From as low as</p>
                         <p className="text-lg font-bold text-white">Ksh 2,000</p>
                         <p className="text-xs text-gray-500">One-time</p>
                       </div>
                       <div className="absolute bottom-4 right-4 left-4 sm:left-auto sm:w-36 p-3 rounded-xl bg-accent-blue/95 border border-white/20 shadow-lg">
                         <p className="text-[10px] font-medium text-white/80 uppercase tracking-wider">Monthly</p>
+                        <p className="text-[10px] text-white/70">From as low as</p>
                         <p className="text-xl font-bold text-white">Ksh 2,000</p>
                         <p className="text-xs text-white/80">All-inclusive</p>
                       </div>
@@ -410,7 +429,7 @@ export default function Products() {
 
         <section
           id="comparison"
-          className="mt-20 lg:mt-28 pt-16 lg:pt-20 border-t border-gray-200 dark:border-gray-700"
+          className="mt-12 lg:mt-16 pt-10 lg:pt-12 border-t border-gray-200 dark:border-gray-700"
           aria-labelledby="comparison-heading"
         >
           <h2 id="comparison-heading" className="text-2xl sm:text-3xl font-bold text-primary-dark dark:text-white mb-6">
@@ -421,6 +440,9 @@ export default function Products() {
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
             Here is a comparison table designed to show that for the cost of a developer&rsquo;s lunch, you get an entire IT department.
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-500 mb-6 max-w-2xl">
+            Our pricing starts from as low as Ksh 2,000; final setup and monthly rates are confirmed with you before checkout.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-primary-dark/50 shadow-sm">
             <table className="w-full min-w-[520px] text-left text-sm">
@@ -448,7 +470,7 @@ export default function Products() {
           <div className="mt-8 p-5 sm:p-6 rounded-xl border-2 border-accent-orange/40 bg-accent-orange/5 dark:bg-accent-orange/10">
             <p className="text-xs font-semibold uppercase tracking-wider text-accent-orange mb-2">The Verdict</p>
             <p className="text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
-              By choosing our managed solution, you save over Ksh 450,000 per year while getting the same professional online presence.
+              Compared with typical hiring costs, our managed solution can save well over Ksh 450,000 per year while you still get a professional online presence—with entry pricing from as low as Ksh 2,000.
             </p>
           </div>
         </section>

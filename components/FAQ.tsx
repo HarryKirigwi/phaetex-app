@@ -2,24 +2,24 @@
 
 const faqs = [
   {
-    question: "What is Phaetex Humanizer?",
+    question: "What is managed e-commerce from Phaetex?",
     answer:
-      "Phaetex Humanizer is an AI-powered tool that takes automated or AI-generated drafts and rewrites them into natural, engaging prose while preserving your unique voice.",
+      "It is a complete online store as a service: we host your shop, keep the platform secure and updated, and offer pricing from as low as Ksh 2,000 for setup and from as low as Ksh 2,000 per month, your exact quote is confirmed before you pay. You manage products and customers; we manage the technology underneath.",
   },
   {
     question: "How does Phaetex handle my data and privacy?",
     answer:
-      "We comply with the Kenya Data Protection Act 2019. We only collect the data we need to run your account and services, and we do not use your provided text to train external models. You can request access, correction, or deletion of your data at any time.",
+      "We comply with the Kenya Data Protection Act 2019. We only collect the data we need to run your account and services. You can request access, correction, or deletion of your data at any time.",
   },
   {
     question: "What is included in the managed e-commerce plan?",
     answer:
-      "For a one-time setup fee of Ksh 2,000 and Ksh 2,000 per month, we provide a fully managed shop: hosting, security updates, backups, and platform maintenance so you can focus on serving customers.",
+      "For pricing from as low as Ksh 2,000 setup and from as low as Ksh 2,000 per month (final rates confirmed at signup), we provide a fully managed shop: hosting, security updates, backups, and platform maintenance so you can focus on serving customers.",
   },
   {
     question: "How do pricing, subscriptions, and refunds work?",
     answer:
-      "Humanizer credits and monthly subscriptions are non-refundable. You pay for a full month of access and can cancel to stop future charges. Our transparent pricing is Ksh 2,000 for setup and Ksh 2,000 per month for managed e-commerce.",
+      "Monthly subscription payments for the managed e-commerce service are non-refundable for the billing period you paid for. You pay for a full month of access and can cancel to stop future charges. Advertised rates start from as low as Ksh 2,000; your invoice reflects the price you agreed to at signup. See our refund policy for details.",
   },
   {
     question: "How can I get support or talk to the team?",
@@ -50,8 +50,8 @@ export default function FAQ() {
               Frequently asked questions
             </h2>
             <p className="mt-2 text-sm sm:text-base text-gray-400 max-w-xl">
-              Discover how Phaetex Humanizer and our managed e-commerce service
-              work, how we handle your data, and what to expect from pricing.
+              Learn how our managed e-commerce service works, how we handle your
+              data, and what to expect from pricing.
             </p>
           </div>
           <a

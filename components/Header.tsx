@@ -10,6 +10,7 @@ const SCROLL_THRESHOLD = 24;
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#products", label: "Products" },
+  { href: "#team", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
 

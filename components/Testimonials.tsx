@@ -17,7 +17,7 @@ const testimonials = [
     name: "Akinyi",
     role: "Content Lead",
     quote:
-      "From humanizer to our online store, everything just works. Best value in Kenya.",
+      "Our online store went live without hiring a dev team. Best value in Kenya.",
   },
 ];
 
